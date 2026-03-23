@@ -7,7 +7,7 @@ local old
 function lightingbypass.init(flags)
     if old then return end
 
-    old = hookfunction(dcs.GetExpectedva, LPH_NO_UPva(function(self, p37)
+    old = hookfunction(dcs.GetExpectedva, LPH_NO_UPVALUES(function(self, p37)
         local va = old(self, p37)
 
         for i, pp in pairs(va) do
